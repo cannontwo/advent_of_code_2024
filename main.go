@@ -7,8 +7,9 @@ import (
 	"strconv"
 )
 
-var DAY_COMMANDS = map[int]func(){
+var DAY_FUNC_MAPPING = map[int]func(){
 	1: run_day_one,
+	2: run_day_two,
 }
 
 func main() {
@@ -22,7 +23,7 @@ func main() {
 	}
 
 	fmt.Printf("Running day %v\n", problem)
-	df, ok := DAY_COMMANDS[problem]
+	df, ok := DAY_FUNC_MAPPING[problem]
 	if !ok {
 		log.Fatalf("No function registered for day %v", problem)
 	}
