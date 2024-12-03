@@ -10,6 +10,7 @@ import (
 var DAY_FUNC_MAPPING = map[int]func(){
 	1: run_day_one,
 	2: run_day_two,
+	3: run_day_three,
 }
 
 func main() {
